@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="myh1">This is my h1 heading</h1>
+    <p id="p1">This is a paragraph</p>
+    <p id="p2">This is also a paragraph</p>
+    
+</body>
+<script src="./stuff/doSomething.js"></script>
+<script>
+    
+    //declare a greetings array and initialize it with 3 values
+    let greetings = ["Good Morning", "Good Afternoon", "Good Evening"];
+    console.log("greetings: " , greetings); //print the array
+
+    //pushing a value on to the greetings array
+    greetings.push("Good Night");
+    console.log("greetings: " , greetings);//print the array
+
+    //creating a new array called newGreetings
+    let newGreetings= new Array();
+    console.log("newGreetings: " , newGreetings);//print the array
+
+    //pop off each value of the array by counting backwards from the end
+    //add the value removed from greetings tot the newGreetings array
+    for(let i = greetings.length-1; i>=0; i--) {
+        let aGreeting = greetings.pop();
+        newGreetings.push(aGreeting);
+        console.log("aGreeting: ", aGreeting);
+    }
+
+    //print the array
+    console.log("greetings: " , greetings);
+    console.log("newGreetings: " , newGreetings);
+
+    //pop off each of the values from the new greetings array but
+    //repeating the pop until the array does not have a length
+    while(newGreetings.length > 0) {
+        let aNewGreeting = newGreetings.pop();
+        console.log("aNewGreetings: ", aNewGreeting);
+    }
+
+</script>
+</html>
+
